@@ -6,6 +6,15 @@ describe Account do
       my_account = Account.new('Mary Smith', 0.00)
       expect{ my_account.deposit(100) }.to change { my_account.balance }.by(100)
     end
+
+    it 'Adds a tansaction object to the history array' do
+      transaction_double = double(:transaction)
+      transaction_class_double = double(:transaction_class, new: transaction_double)
+
+      my_account = Account.new('Mary Smith', 0.00)
+      my_account.deposit(100, transaction_class_double)
+      expect(my_account.history).to eq [transaction_double]
+    end
   end
 
   describe '#withdraw' do 

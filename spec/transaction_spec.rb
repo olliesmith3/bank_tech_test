@@ -12,7 +12,7 @@ describe Transaction do
       transaction = Transaction.new(100, 600)
       expect(transaction.debit).to eq "100.00"
       expect(transaction.credit).to eq ""
-      expect(transaction.balance).to eq "700.00"
+      expect(transaction.balance_after_transaction).to eq "600.00"
       expect(transaction.date).to eq "01/01/1994"
     end
 
@@ -20,7 +20,7 @@ describe Transaction do
       transaction = Transaction.new(-100, 600)
       expect(transaction.debit).to eq ""
       expect(transaction.credit).to eq "100.00"
-      expect(transaction.balance).to eq "500.00"
+      expect(transaction.balance_after_transaction).to eq "600.00"
       expect(transaction.date).to eq "01/01/1994"
     end
   end

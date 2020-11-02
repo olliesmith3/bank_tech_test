@@ -2,9 +2,9 @@ require 'time'
 
 class Transaction
 
-  attr_reader :credit, :debit, :balance, :date
+  attr_reader :credit, :debit, :balance_after_transaction, :date
 
-  def initialize(amount, balance)
+  def initialize(amount, balance_after_transaction)
     if amount < 0
       @credit = '%.2f' % amount.abs
       @debit = ''
@@ -12,7 +12,7 @@ class Transaction
       @credit = ''
       @debit = '%.2f' % amount.abs
     end
-    @balance = '%.2f' % (balance + amount)
+    @balance_after_transaction = '%.2f' % balance_after_transaction
     @date = Time.now.strftime("%d/%m/%Y") 
   end
 end

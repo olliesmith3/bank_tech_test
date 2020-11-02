@@ -3,10 +3,11 @@
     "coverage": {
       "/Users/student/projects/week10/bank_tech_test/spec/account_manager_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          1,
           2,
           2,
           null,
@@ -38,10 +39,11 @@
       },
       "/Users/student/projects/week10/bank_tech_test/spec/account_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          1,
           4,
           2,
           2,
@@ -72,8 +74,9 @@
       },
       "/Users/student/projects/week10/bank_tech_test/lib/account.rb": {
         "lines": [
-          1,
           null,
+          null,
+          1,
           1,
           null,
           1,
@@ -89,17 +92,16 @@
           null,
           1,
           4,
-          1,
-          null,
           3,
           3,
-          null,
           null,
           null
         ]
       },
       "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_create_account_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -111,6 +113,8 @@
       },
       "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_make_a_deposit_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -122,6 +126,8 @@
       },
       "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_make_a_withdrawal_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -134,10 +140,11 @@
       },
       "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_view_transactions_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          1,
           1,
           1,
           null,
@@ -154,11 +161,12 @@
       },
       "/Users/student/projects/week10/bank_tech_test/spec/transaction_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
           1,
-          null,
           1,
           2,
           null,
@@ -188,7 +196,6 @@
           1,
           null,
           1,
-          null,
           1,
           null,
           1,

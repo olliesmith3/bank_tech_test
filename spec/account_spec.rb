@@ -1,14 +1,15 @@
+# frozen_string_literal: true
+
 require 'account'
 
 describe Account do
+  let(:my_account) { Account.new('Mary Smith', 0.00) }
+  let(:transaction_double) { double(:transaction) }
+  let(:transaction_class_double) { double(:transaction_class, new: transaction_double) }
 
-  let( :my_account               ) { Account.new('Mary Smith', 0.00)                     }
-  let( :transaction_double       ) { double(:transaction)                                }
-  let( :transaction_class_double ) { double(:transaction_class, new: transaction_double) }
-
-  describe '#deposit' do 
+  describe '#deposit' do
     it 'Increases the account balance by the deposit amount' do
-      expect{ my_account.deposit(100) }.to change { my_account.balance }.by(100)
+      expect { my_account.deposit(100) }.to change { my_account.balance }.by(100)
     end
 
     it 'Adds a transaction object to the history array' do
@@ -17,10 +18,10 @@ describe Account do
     end
   end
 
-  describe '#withdraw' do 
+  describe '#withdraw' do
     it 'Decreases the account balance by the deposit amount' do
       my_account = Account.new('Mary Smith', 200.00)
-      expect{ my_account.withdraw(100) }.to change { my_account.balance }.by(-100)
+      expect { my_account.withdraw(100) }.to change { my_account.balance }.by(-100)
     end
 
     it 'Raises an error if attempting to withdraw more money than the balance' do

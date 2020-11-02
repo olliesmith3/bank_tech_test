@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'create account' do
   it 'User creates an account' do
     my_account = AccountManager.create_account('Mary Smith')

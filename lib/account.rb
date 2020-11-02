@@ -1,5 +1,4 @@
 class Account
-
   attr_reader :balance, :history, :holder_name
 
   def initialize(holder_name, starting_balance)
@@ -14,11 +13,8 @@ class Account
   end
 
   def withdraw(amount, transaction_class = Transaction)
-    if amount > @balance
-      raise 'Insufficient funds'
-    else
-      @balance -= amount
-      @history << transaction_class.new(-amount, @balance)
-    end
+    raise 'Insufficient funds' if amount > @balance
+    @balance -= amount
+    @history << transaction_class.new(-amount, @balance)
   end
 end

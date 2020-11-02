@@ -5,8 +5,8 @@ class AccountManager
 
   def self.print_statement(account)
     statement = "date || credit || debit || balance" + "\n"
-    account.history.each { |transaction|
-      line = transaction.date + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + transaction.balance_after_transaction 
+    account.history.reverse.each { |transaction|
+      line = transaction.date + ' || ' + transaction.debit + ' || ' + transaction.credit + ' || ' + transaction.balance_after_transaction 
       statement << line.gsub(/\s+/, ' ') + "\n"
     }
     puts statement

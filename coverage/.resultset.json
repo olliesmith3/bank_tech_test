@@ -1,0 +1,211 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/student/projects/week10/bank_tech_test/spec/account_manager_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/lib/account_manager.rb": {
+        "lines": [
+          1,
+          1,
+          5,
+          null,
+          null,
+          1,
+          1,
+          1,
+          3,
+          3,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/spec/account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          4,
+          2,
+          2,
+          null,
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          4,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/lib/account.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          8,
+          8,
+          8,
+          null,
+          null,
+          1,
+          6,
+          6,
+          null,
+          null,
+          1,
+          4,
+          1,
+          null,
+          3,
+          3,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_create_account_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_make_a_deposit_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_make_a_withdrawal_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/spec/features/user_can_view_transactions_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/spec/transaction_spec.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/student/projects/week10/bank_tech_test/lib/transaction.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          10,
+          4,
+          4,
+          null,
+          6,
+          6,
+          null,
+          10,
+          10,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 757382400
+  }
+}

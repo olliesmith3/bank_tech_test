@@ -7,7 +7,7 @@ describe Account do
       expect{ my_account.deposit(100) }.to change { my_account.balance }.by(100)
     end
 
-    it 'Adds a tansaction object to the history array' do
+    it 'Adds a transaction object to the history array' do
       transaction_double = double(:transaction)
       transaction_class_double = double(:transaction_class, new: transaction_double)
 

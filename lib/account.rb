@@ -1,6 +1,6 @@
 class Account
 
-  attr_reader :balance, :history
+  attr_reader :balance, :history, :holder_name
 
   def initialize(holder_name, starting_balance)
     @holder_name = holder_name

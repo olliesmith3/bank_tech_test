@@ -3,5 +3,3 @@ class AccountManager
     account = account_class.new(holder_name, starting_balance)
   end
 end
-
-# Use '%.2f' % 500 to get 500.00

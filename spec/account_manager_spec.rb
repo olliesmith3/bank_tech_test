@@ -6,8 +6,7 @@ describe AccountManager do
       account_double = double(:account)
       account_class_double = double(:account_class, new: account_double)
 
-      my_account = AccountManager.create_account('Mary Smith', account_class_double)
-      expect(AccountManager.create_account('Mary Smith', account_class_double)).to eq account_double
+      expect(AccountManager.create_account('Mary Smith', 0.00, account_class_double)).to eq account_double
     end
   end
 end

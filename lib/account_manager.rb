@@ -13,10 +13,13 @@ class AccountManager
     protected
     
     def statement_body(account)
-      account.history.reverse.map do |transaction|
-        transaction_data = transaction.date + ' || ' + transaction.debit + ' || ' + transaction.credit + ' || ' + transaction.balance_after_transaction
+      balance = account.starting_balance
+      array = account.history.sort_by { |trans| trans.date }
+      array.map do |transaction|
+        balance += (transaction.credit.to_f - transaction.debit.to_f)
+        transaction_data = transaction.date + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + '%.2f' % balance.to_s
         transaction_data.gsub(/\s+/, ' ') + "\n"
-      end.join
+      end.reverse.join
     end
   end
 end

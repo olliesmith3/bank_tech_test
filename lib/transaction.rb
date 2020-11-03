@@ -3,18 +3,17 @@
 require 'time'
 
 class Transaction
-  attr_reader :credit, :debit, :balance_after_transaction, :date
+  attr_reader :credit, :debit, :date
 
-  def initialize(amount, balance_after_transaction)
+  def initialize(amount, date)
     if amount.negative?
-      @credit = format_amount(amount.abs)
-      @debit = ''
-    else
       @credit = ''
       @debit = format_amount(amount.abs)
+    else
+      @credit = format_amount(amount.abs)
+      @debit = ''
     end
-    @balance_after_transaction = format_amount(balance_after_transaction)
-    @date = formatted_date
+    @date = date
   end
 
   private
@@ -22,9 +21,5 @@ class Transaction
   # This replaces an integer or a float with a string that has two decimal places ( 100 => '100.00' )
   def format_amount(amount)
     '%.2f' % amount
-  end
-
-  def formatted_date
-    Time.now.strftime('%d/%m/%Y')
   end
 end

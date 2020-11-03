@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Account
   attr_reader :balance, :history, :holder_name
 

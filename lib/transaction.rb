@@ -19,7 +19,7 @@ class Transaction
 
   private
 
-  # This replaces an integer with a string that has two decimal places ( 100 => '100.00' )
+  # This replaces an integer or a float with a string that has two decimal places ( 100 => '100.00' )
   def format_amount(amount)
     '%.2f' % amount
   end

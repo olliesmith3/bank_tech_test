@@ -19,7 +19,7 @@ date || credit || debit || balance
 
 Plan:
 
-class: 
+classes: 
        account: knows the account holders name
                 knows the account value
                 knows the transaction history (array of transaction objects)
@@ -30,3 +30,41 @@ class:
                     knows the balance after that transaction  
        account_manager: can create an account (takes name and starting balance)
                         can print a statement to irb
+Requirements:
+
+       Ruby version = 2.7.0
+
+How to use:
+
+The program can be used in irb. In the terminal type irb.
+
+Require the following files in irb:
+
+       require './lib/account.rb'
+       require './lib/transaction.rb'
+       require './lib/account_manager.rb'
+
+Create an empty account with the following command:
+ 
+       account_name = AccountManager.create_account('Your Name')
+
+Or to create an account with £1000:
+
+       account_name = AccountManager.create_account('Your Name', 1000.00)
+
+To make a deposit of £100: 
+ 
+       account_name.deposit(100)
+
+This also accepts values to the nearest pence e.g. for £100.58:
+
+       account_name.deposit(100.58)
+
+Make a withdrawal: 
+
+       account_name.withdraw(100.58)
+
+Print a bank statement:
+
+       AccountManager.print_statement(my_account)
+

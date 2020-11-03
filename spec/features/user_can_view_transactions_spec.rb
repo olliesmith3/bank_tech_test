@@ -2,7 +2,7 @@
 
 require 'timecop'
 
-describe 'See alist of the recent transactions' do
+describe 'See a list of the recent transactions' do
   before do
     Timecop.freeze(Time.local(1994))
   end

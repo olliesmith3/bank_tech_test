@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.57
+         2.58
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>122</b> relevant lines,
-    <span class="green"><b>122</b> lines covered</span> and
+    <b>124</b> relevant lines,
+    <span class="green"><b>124</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,11 +84,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#b228974a92f096335d018d9ce14be58aafb2b059" class="src_link" title="lib/account_manager.rb">lib/account_manager.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">25</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">14</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.14</td>
+            <td class="cell--number">3.19</td>
             
           </tr>
         
@@ -704,8 +704,8 @@
     
 
     <div class="t-line-summary">
-      <b>14</b> relevant lines.
-      <span class="green"><b>14</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -899,7 +899,7 @@
 
             
 
-            <code class="ruby">      array = account.history.sort_by { |trans| trans.date }</code>
+            <code class="ruby">      array = account.history.sort_by { |transaction| transaction.date }</code>
           </li>
         </div>
       
@@ -932,7 +932,7 @@
 
             
 
-            <code class="ruby">        transaction_data = transaction.date + &#39; || &#39; + transaction.credit + &#39; || &#39; + transaction.debit + &#39; || &#39; + &#39;%.2f&#39; % balance.to_s</code>
+            <code class="ruby">        transaction_data = transaction.date + &#39; || &#39; + transaction.credit + &#39; || &#39; + transaction.debit + &#39; || &#39; + AccountManager.format_balance(balance)</code>
           </li>
         </div>
       
@@ -976,12 +976,56 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    def format_balance(balance)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="6" data-linenumber="26">
+            <span class="hits">6</span>
+            
+
+            
+
+            <code class="ruby">      &#39;%.2f&#39; % balance.to_s</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 
@@ -2654,7 +2698,7 @@
 
             
 
-            <code class="ruby">describe &#39;See alist of the recent transactions&#39; do</code>
+            <code class="ruby">describe &#39;See a list of the recent transactions&#39; do</code>
           </li>
         </div>
       

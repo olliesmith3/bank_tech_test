@@ -5,9 +5,6 @@ class Account
 
   def initialize(starting_balance)
     @starting_balance = starting_balance
-    # unless starting_balance.zero? 
-    #   self.deposit(starting_balance)
-    # end
     @history = []
   end
 
@@ -22,12 +19,6 @@ class Account
 
     @history << transaction_class.new(-amount, date)
   end
-
-  # def get_balance_after_transaction(amount)
-  #   #raise 'Insufficient funds' if (@balance + amount).negative?
-
-  #   (@balance += amount).to_s
-  # end
 
   private
 

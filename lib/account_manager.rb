@@ -14,12 +14,16 @@ class AccountManager
     
     def statement_body(account)
       balance = account.starting_balance
-      array = account.history.sort_by { |trans| trans.date }
-      array.map do |transaction|
+      chronological_transactions = account.history.sort_by { |transaction| transaction.date }
+      chronological_transactions.map do |transaction|
         balance += (transaction.credit.to_f - transaction.debit.to_f)
-        transaction_data = transaction.date + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + '%.2f' % balance.to_s
+        transaction_data = transaction.date + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + AccountManager.format_balance(balance)
         transaction_data.gsub(/\s+/, ' ') + "\n"
       end.reverse.join
+    end
+
+    def format_balance(balance)
+      '%.2f' % balance.to_s
     end
   end
 end

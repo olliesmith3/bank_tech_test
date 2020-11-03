@@ -20,8 +20,7 @@ date || credit || debit || balance
 Plan:
 
 classes: 
-       account: knows the account holders name
-                knows the account value
+       account: knows the account value
                 knows the transaction history (array of transaction objects)
                 can make a deposit (time will be current timestamp)
                 can make a withdrawal
@@ -30,6 +29,7 @@ classes:
                     knows the balance after that transaction  
        account_manager: can create an account (takes name and starting balance)
                         can print a statement to irb
+
 Requirements:
 
        Ruby version = 2.7.0
@@ -46,11 +46,11 @@ Require the following files in irb:
 
 Create an empty account with the following command:
  
-       account_name = AccountManager.create_account('Your Name')
+       account_name = AccountManager.create_account
 
 Or to create an account with £1000:
 
-       account_name = AccountManager.create_account('Your Name', 1000.00)
+       account_name = AccountManager.create_account(1000.00)
 
 To make a deposit of £100: 
  

@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.47
+         2.4
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>121</b> relevant lines,
-    <span class="green"><b>121</b> lines covered</span> and
+    <b>119</b> relevant lines,
+    <span class="green"><b>119</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,11 +73,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d4596334688b37357cb9ce8fa5fbe63dfaafac11" class="src_link" title="lib/account.rb">lib/account.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">32</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">18</td>
+            <td class="cell--number">31</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">5.17</td>
+            <td class="cell--number">4.76</td>
             
           </tr>
         
@@ -128,9 +128,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8dbd31090487a91ebf4ab034be2d4663cd3bc37c" class="src_link" title="spec/features/user_can_create_account_spec.rb">spec/features/user_can_create_account_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">5</td>
+            <td class="cell--number">8</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -211,8 +211,8 @@
     
 
     <div class="t-line-summary">
-      <b>18</b> relevant lines.
-      <span class="green"><b>18</b> lines covered</span> and
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -263,7 +263,7 @@
 
             
 
-            <code class="ruby">  attr_reader :balance, :history, :holder_name</code>
+            <code class="ruby">  attr_reader :balance, :history</code>
           </li>
         </div>
       
@@ -285,7 +285,7 @@
 
             
 
-            <code class="ruby">  def initialize(holder_name, starting_balance)</code>
+            <code class="ruby">  def initialize(starting_balance)</code>
           </li>
         </div>
       
@@ -296,7 +296,7 @@
 
             
 
-            <code class="ruby">    @holder_name = holder_name</code>
+            <code class="ruby">    @balance = starting_balance</code>
           </li>
         </div>
       
@@ -307,18 +307,18 @@
 
             
 
-            <code class="ruby">    @balance = starting_balance</code>
+            <code class="ruby">    @history = []</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="12" data-linenumber="9">
-            <span class="hits">12</span>
+          <li class="never" data-hits="" data-linenumber="9">
+            
             
 
             
 
-            <code class="ruby">    @history = []</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -329,23 +329,12 @@
 
             
 
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
@@ -356,7 +345,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="13">
+          <li class="covered" data-hits="6" data-linenumber="12">
             <span class="hits">6</span>
             
 
@@ -367,7 +356,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -378,7 +367,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="15">
+          <li class="covered" data-hits="6" data-linenumber="14">
             <span class="hits">6</span>
             
 
@@ -389,7 +378,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="16">
+          <li class="covered" data-hits="6" data-linenumber="15">
             <span class="hits">6</span>
             
 
@@ -400,7 +389,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="16">
             
             
 
@@ -411,7 +400,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
@@ -422,7 +411,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="19">
+          <li class="covered" data-hits="1" data-linenumber="18">
             <span class="hits">1</span>
             
 
@@ -433,7 +422,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="8" data-linenumber="20">
+          <li class="covered" data-hits="8" data-linenumber="19">
             <span class="hits">8</span>
             
 
@@ -444,7 +433,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="21">
+          <li class="covered" data-hits="4" data-linenumber="20">
             <span class="hits">4</span>
             
 
@@ -455,7 +444,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="22">
+          <li class="never" data-hits="" data-linenumber="21">
             
             
 
@@ -466,7 +455,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="23">
+          <li class="covered" data-hits="3" data-linenumber="22">
             <span class="hits">3</span>
             
 
@@ -477,7 +466,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="24">
+          <li class="covered" data-hits="3" data-linenumber="23">
             <span class="hits">3</span>
             
 
@@ -488,7 +477,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="never" data-hits="" data-linenumber="24">
             
             
 
@@ -499,7 +488,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="25">
             
             
 
@@ -510,7 +499,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
+          <li class="covered" data-hits="1" data-linenumber="26">
             <span class="hits">1</span>
             
 
@@ -521,7 +510,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
+          <li class="never" data-hits="" data-linenumber="27">
             
             
 
@@ -532,7 +521,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="29">
+          <li class="covered" data-hits="1" data-linenumber="28">
             <span class="hits">1</span>
             
 
@@ -543,7 +532,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="14" data-linenumber="30">
+          <li class="covered" data-hits="14" data-linenumber="29">
             <span class="hits">14</span>
             
 
@@ -554,7 +543,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -565,7 +554,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
+          <li class="never" data-hits="" data-linenumber="31">
             
             
 
@@ -657,7 +646,7 @@
 
             
 
-            <code class="ruby">    def create_account(holder_name, starting_balance = 0.00, account_class = Account)</code>
+            <code class="ruby">    def create_account(starting_balance = 0.00, account_class = Account)</code>
           </li>
         </div>
       
@@ -668,7 +657,7 @@
 
             
 
-            <code class="ruby">      account_class.new(holder_name, starting_balance)</code>
+            <code class="ruby">      account_class.new(starting_balance)</code>
           </li>
         </div>
       
@@ -1357,7 +1346,7 @@
 
             
 
-            <code class="ruby">      expect(AccountManager.create_account(&#39;Mary Smith&#39;, 0.00, account_class_double)).to eq account_double</code>
+            <code class="ruby">      expect(AccountManager.create_account(0.00, account_class_double)).to eq account_double</code>
           </li>
         </div>
       
@@ -1487,7 +1476,7 @@
 
             
 
-            <code class="ruby">  let(:my_account) { Account.new(&#39;Mary Smith&#39;, 0.00) }</code>
+            <code class="ruby">  let(:my_account) { Account.new(0.00) }</code>
           </li>
         </div>
       
@@ -1762,7 +1751,7 @@
 
             
 
-            <code class="ruby">      my_account = Account.new(&#39;Mary Smith&#39;, 200.00)</code>
+            <code class="ruby">      my_account = Account.new(200.00)</code>
           </li>
         </div>
       
@@ -1961,8 +1950,8 @@
     
 
     <div class="t-line-summary">
-      <b>5</b> relevant lines.
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -2024,7 +2013,7 @@
 
             
 
-            <code class="ruby">    my_account = AccountManager.create_account(&#39;Mary Smith&#39;)</code>
+            <code class="ruby">    my_account = AccountManager.create_account</code>
           </li>
         </div>
       
@@ -2040,18 +2029,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="7">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    expect(my_account.holder_name).to eq &#39;Mary Smith&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
+          <li class="never" data-hits="" data-linenumber="7">
             
             
 
@@ -2062,7 +2040,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -2154,7 +2132,7 @@
 
             
 
-            <code class="ruby">    my_account = AccountManager.create_account(&#39;Mary Smith&#39;)</code>
+            <code class="ruby">    my_account = AccountManager.create_account</code>
           </li>
         </div>
       
@@ -2284,7 +2262,7 @@
 
             
 
-            <code class="ruby">    my_account = AccountManager.create_account(&#39;Mary Smith&#39;)</code>
+            <code class="ruby">    my_account = AccountManager.create_account</code>
           </li>
         </div>
       
@@ -2491,7 +2469,7 @@
 
             
 
-            <code class="ruby">    my_account = AccountManager.create_account(&#39;Mary Smith&#39;)</code>
+            <code class="ruby">    my_account = AccountManager.create_account</code>
           </li>
         </div>
       

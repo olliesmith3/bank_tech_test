@@ -8,7 +8,7 @@ describe AccountManager do
 
   describe '.create_account' do
     it 'Creates a new account for Mary Smith with a balance of 0.00' do
-      expect(AccountManager.create_account('Mary Smith', 0.00, account_class_double)).to eq account_double
+      expect(AccountManager.create_account(0.00, account_class_double)).to eq account_double
     end
   end
 end

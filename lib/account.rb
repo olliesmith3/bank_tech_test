@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 class Account
-  attr_reader :balance, :history, :holder_name
+  attr_reader :balance, :history
 
-  def initialize(holder_name, starting_balance)
-    @holder_name = holder_name
+  def initialize(starting_balance)
     @balance = starting_balance
     @history = []
   end

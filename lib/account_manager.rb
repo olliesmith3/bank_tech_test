@@ -2,8 +2,8 @@
 
 class AccountManager
   class << self
-    def create_account(holder_name, starting_balance = 0.00, account_class = Account)
-      account_class.new(holder_name, starting_balance)
+    def create_account(starting_balance = 0.00, account_class = Account)
+      account_class.new(starting_balance)
     end
 
     def print_statement(account)

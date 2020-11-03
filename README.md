@@ -23,10 +23,10 @@ class:
        account: knows the account holders name
                 knows the account value
                 knows the transaction history (array of transaction objects)
+                can make a deposit (time will be current timestamp)
+                can make a withdrawal
        transaction: knows the date
                     knows the amount  
-                    knows the balance after that transaction (is this necessary?) 
+                    knows the balance after that transaction  
        account_manager: can create an account (takes name and starting balance)
-                        can make a deposit (time will be current timestamp)
-                        can make a withdrawal
-                        can print a statement to the command line (which shows the last three transactions formatted as above)
+                        can print a statement to irb

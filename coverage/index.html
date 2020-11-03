@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.03
+         2.24
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>102</b> relevant lines,
-    <span class="green"><b>102</b> lines covered</span> and
+    <b>107</b> relevant lines,
+    <span class="green"><b>107</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -95,11 +95,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#8f98d1fec8ba52c6b92e8b27af2139c567245d9c" class="src_link" title="lib/transaction.rb">lib/transaction.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">11</td>
-            <td class="cell--number">11</td>
+            <td class="cell--number">29</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">4.91</td>
+            <td class="cell--number">5.44</td>
             
           </tr>
         
@@ -735,8 +735,8 @@
     
 
     <div class="t-line-summary">
-      <b>11</b> relevant lines.
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -853,7 +853,7 @@
 
             
 
-            <code class="ruby">      @credit = &#39;%.2f&#39; % amount.abs</code>
+            <code class="ruby">      @credit = format_amount(amount.abs)</code>
           </li>
         </div>
       
@@ -897,7 +897,7 @@
 
             
 
-            <code class="ruby">      @debit = &#39;%.2f&#39; % amount.abs</code>
+            <code class="ruby">      @debit = format_amount(amount.abs)</code>
           </li>
         </div>
       
@@ -919,7 +919,7 @@
 
             
 
-            <code class="ruby">    @balance_after_transaction = &#39;%.2f&#39; % balance_after_transaction</code>
+            <code class="ruby">    @balance_after_transaction = format_amount(balance_after_transaction)</code>
           </li>
         </div>
       
@@ -930,7 +930,7 @@
 
             
 
-            <code class="ruby">    @date = Time.now.strftime(&#39;%d/%m/%Y&#39;)</code>
+            <code class="ruby">    @date = format_date</code>
           </li>
         </div>
       
@@ -947,6 +947,116 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="22">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def format_amount(amount)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="20" data-linenumber="23">
+            <span class="hits">20</span>
+            
+
+            
+
+            <code class="ruby">    &#39;%.2f&#39; % amount</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def format_date</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="27">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">    Time.now.strftime(&#39;%d/%m/%Y&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
             
             
 

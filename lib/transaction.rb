@@ -7,13 +7,23 @@ class Transaction
 
   def initialize(amount, balance_after_transaction)
     if amount.negative?
-      @credit = '%.2f' % amount.abs
+      @credit = format_amount(amount.abs)
       @debit = ''
     else
       @credit = ''
-      @debit = '%.2f' % amount.abs
+      @debit = format_amount(amount.abs)
     end
-    @balance_after_transaction = '%.2f' % balance_after_transaction
-    @date = Time.now.strftime('%d/%m/%Y')
+    @balance_after_transaction = format_amount(balance_after_transaction)
+    @date = format_date
+  end
+
+  private
+
+  def format_amount(amount)
+    '%.2f' % amount
+  end
+
+  def format_date
+    Time.now.strftime('%d/%m/%Y')
   end
 end

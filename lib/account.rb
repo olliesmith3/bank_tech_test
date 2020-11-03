@@ -16,6 +16,7 @@ class Account
 
   def withdraw(amount, transaction_class = Transaction)
     raise 'Insufficient funds' if amount > @balance
+
     @balance -= amount
     @history << transaction_class.new(-amount, @balance)
   end

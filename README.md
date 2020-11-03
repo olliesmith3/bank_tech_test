@@ -1,5 +1,7 @@
 # Bank Tech Test
 
+A short tech test to build a bank app that is run in irb. The focus of this challenge was on professional code quality.
+
 ## Technologies
 
        Ruby version = 2.7.0

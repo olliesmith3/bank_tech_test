@@ -571,7 +571,7 @@
 
             
 
-            <code class="ruby">      transaction_data = transaction.date + &#39; || &#39; + credit + &#39; || &#39; + debit + &#39; || &#39; + format_money(balance)</code>
+            <code class="ruby">      transaction_data = [transaction.date, credit, debit, format_money(balance)].join(&#39; || &#39;)</code>
           </li>
         </div>
       
@@ -582,7 +582,7 @@
 
             
 
-            <code class="ruby">      transaction_data.gsub(/\s+/, &#39; &#39;) + &quot;\n&quot;</code>
+            <code class="ruby">      transaction_data.squeeze(&#39; &#39;) + &quot;\n&quot;</code>
           </li>
         </div>
       

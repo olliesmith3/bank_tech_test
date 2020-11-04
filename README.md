@@ -24,11 +24,11 @@ Require the following files in irb:
 ```
 Create an empty account with the following command:
 ```
-       2.7.0 :004 > account_name = AccountManager.create_account
+       2.7.0 :004 > account_name = Account.new
 ```
 Or to create an account with £1000:
 ```
-       2.7.0 :005 > account_name = AccountManager.create_account(1000.00)
+       2.7.0 :005 > account_name = Account.new(1000.00)
 ```
 To make a deposit of £100: 
 ```
@@ -44,7 +44,7 @@ Make a withdrawal:
 ```
 Print a bank statement:
 ```
-       2.7.0 :009 > AccountManager.print_statement(my_account)
+       2.7.0 :009 > account_name.print_statement
 ```
 ## Run the tests
 ```
@@ -70,12 +70,14 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
-#### Additional Feature
+#### Additional Feature 1
 
 As a user, I may want to add in a transaction that was missing, by passing it with a date in the past (eg. account.deposit(50, ’03/08/2020’) or whatever date format makes sense for your code).
 This should in turn readjust my statement so that the transaction shows in the right place, and the balances are still correct. Does your code currently make this easy to add in? What would need change in your code to make this possible?
 
 First of all this meant I had to change the account class to allow it to be passed a date. I then needed to order the history array based on the date of each transaction. This then highlighted that my balances are incorrect as they are correct for when the transaction was put into the array, not when the transaction was actually made. I removed the balance instance variable of the transaction class and instead calculated the balance when I printed the statement. Due to the formatting of the expected output, I had to calculate the balance accumulator in ascending date but display the statements in descending date.
+
+#### Additional Feature 2
 
 ## Plan:
 ```
@@ -93,5 +95,5 @@ classes:
 
 ##### Edit
 
-After the addional feature the balance is no longer stored on the account - this would not be compatible with back dated transactions. The transaction no longer knows the balance after that transaction.
+After the addional feature 1 the balance is no longer stored on the account - this would not be compatible with back dated transactions. The transaction no longer knows the balance after that transaction.
 

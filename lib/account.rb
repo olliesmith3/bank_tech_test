@@ -33,8 +33,8 @@ class Account
     chronological_transactions.map do |transaction|
       credit, debit = format_credit_or_debit(transaction.amount), format_credit_or_debit(-transaction.amount)
       balance += (credit.to_f - debit.to_f)
-      transaction_data = transaction.date + ' || ' + credit + ' || ' + debit + ' || ' + format_money(balance)
-      transaction_data.gsub(/\s+/, ' ') + "\n"
+      transaction_data = [transaction.date, credit, debit, format_money(balance)].join(' || ')
+      transaction_data.squeeze(' ') + "\n"
     end.reverse.join
   end
 

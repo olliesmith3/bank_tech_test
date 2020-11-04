@@ -26,7 +26,7 @@ class Account
 
   def print_statement(option = "no option")
     select(option)
-    puts number_of_columns_head + "\n" + statement_body
+    puts statement_head + "\n" + statement_body
   end
 
   private
@@ -36,6 +36,8 @@ class Account
       @american_date = true
     elsif option.include? "three columns"
       @three_columns = true
+    elsif option.include? "reverse columns"
+      @reverse_columns = true
     end 
   end
 
@@ -45,18 +47,21 @@ class Account
     chronological_transactions.map do |transaction|
       credit, debit = format_credit_or_debit(transaction.amount), format_credit_or_debit(-transaction.amount)
       balance += (credit.to_f - debit.to_f)
-      transaction_data = number_of_columns_body(format_date(transaction.date), credit, debit, format_money(balance)).join(' || ')
-      transaction_data.squeeze(' ') + "\n"
+      transaction_data(transaction, credit, debit, balance).squeeze(' ') + "\n"
     end.reverse.join
+  end
+
+  def transaction_data(transaction, credit, debit, balance)
+    if @reverse_columns == true
+      number_of_columns_body(format_date(transaction.date), credit, debit, format_money(balance)).reverse.join(' || ')
+    else
+      number_of_columns_body(format_date(transaction.date), credit, debit, format_money(balance)).join(' || ')
+    end
   end
 
   def number_of_columns_body(date, credit, debit, balance)
     if @three_columns == true
-      if debit == ""
-        [date, credit, balance]
-      else
-        [date, "(#{debit})", balance]
-      end
+      debit == "" ? [date, credit, balance] : [date, "(#{debit})", balance]
     else
       [date, credit, debit, balance]
     end
@@ -79,7 +84,11 @@ class Account
     @american_date == false ? date.strftime('%d/%m/%Y') : date.strftime('%m/%d/%Y')
   end
 
-  def number_of_columns_head
-    @three_columns == false ? 'date || credit || debit || balance' : 'date || transaction || balance'
+  def statement_head
+    if @reverse_columns == true
+      @three_columns == false ? 'balance || debit || credit || date' : 'balance || transaction || date'
+    else
+      @three_columns == false ? 'date || credit || debit || balance' : 'date || transaction || balance'
+    end
   end
 end

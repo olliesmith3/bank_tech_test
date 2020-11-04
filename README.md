@@ -104,7 +104,9 @@ Of course, I can choose 0, 1, 2 or more options.
 
 1) To be able to change the date formatting I needed to separate the formatting and the data. This meant storing the raw date inside the transaction and formatting in the print_statement method. This then allowed me to pass the option into the format_date method and decide which format to use.
 
-2) Introducing a second option made it clear I could not have the default value being nil as I would not know which option to action.
+2) Introducing a second option made it clear I could not have the default value being nil as I would not know which option to action. This led me to having instance variables for each option and having a helper method that carried out different options based on the option selected.
+
+3) This was 
 
 ## Plan:
 ```
@@ -122,5 +124,5 @@ classes:
 
 ##### Edit
 
-After the addional feature 1 the balance is no longer stored on the account - this would not be compatible with back dated transactions. The transaction no longer knows the balance after that transaction.
+After the first addional feature the balance is no longer stored on the account - this would not be compatible with back dated transactions. The transaction no longer knows the balance after that transaction.
 

@@ -46,6 +46,22 @@ Print a bank statement:
 ```
        2.7.0 :009 > account_name.print_statement
 ```
+Print a bank statement with the american style date:
+```
+       2.7.0 :009 > account_name.print_statement('american date')
+```
+Print a bank statement with three columns (debit transactions will be shown in brackets):
+```
+       2.7.0 :009 > account_name.print_statement('three columns')
+```       
+Print a bank statement with the columns reversed:
+```
+       2.7.0 :009 > account_name.print_statement('reverse columns')
+```
+Print a bank statement with all three options selected:
+```
+       2.7.0 :009 > account_name.print_statement('american date, three columns, reverse columns')
+```
 ## Run the tests
 ```
        $ rspec
@@ -126,4 +142,10 @@ classes:
 ##### Edit
 
 After the first addional feature the balance is no longer stored on the account - this would not be compatible with back dated transactions. The transaction no longer knows the balance after that transaction.
+
+After the second group of additional features, the account manager class was removed - it was too closely coupled with account and the definitions of the two were blurry. Transaction class has been slimmed down to remove all formatting and only store the bare minimum of data required.
+
+## What I learned from this tech test
+
+The main difficulty I had with this tech test was adjusting my code to requirements added after I had written my first solution. This taught me what it means for code to be easily changable. I had to separate data from formatting and also to add formatting in at the latest possible stage.
 

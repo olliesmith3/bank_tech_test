@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
 require 'account'
+require 'timecop'
 
 describe Account do
-  let(:transaction_double) { double(:transaction, amount: 100, date: '01/01/1994') }
+  let(:transaction_double) { double(:transaction, amount: 100, date: Time.new(1994, 1, 1)) }
   let(:transaction_class_double) { double(:transaction_class, new: transaction_double) }
   let(:my_account) { Account.new(0.00, transaction_class_double) }
+
+  before do
+    Timecop.freeze(Time.local(1994))
+  end
 
   describe '#deposit' do
     it 'Adds a transaction to the history' do

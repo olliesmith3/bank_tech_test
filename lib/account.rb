@@ -3,21 +3,22 @@
 class Account
   attr_reader :starting_balance, :history
 
-  def initialize(starting_balance = 0)
+  def initialize(starting_balance = 0, transaction_class = Transaction)
     @starting_balance = starting_balance
     @history = []
+    @transaction_class = transaction_class
   end
 
-  def deposit(amount, transaction_class = Transaction, date = formatted_date)
+  def deposit(amount, date = formatted_date)
     check_input(amount)
 
-    @history << transaction_class.new(amount, date)
+    @history << @transaction_class.new(amount, date)
   end
 
-  def withdraw(amount, transaction_class = Transaction, date = formatted_date)
+  def withdraw(amount, date = formatted_date)
     check_input(amount)
 
-    @history << transaction_class.new(-amount, date)
+    @history << @transaction_class.new(-amount, date)
   end
 
   def print_statement

@@ -3,9 +3,9 @@
 require 'account'
 
 describe Account do
-  let(:my_account) { Account.new(0.00) }
   let(:transaction_double) { double(:transaction) }
   let(:transaction_class_double) { double(:transaction_class, new: transaction_double) }
+  let(:my_account) { Account.new(0.00, transaction_class_double) }
 
   describe '#deposit' do
     it 'Adds a transaction to the history' do
@@ -13,7 +13,7 @@ describe Account do
     end
 
     it 'Adds a transaction object to the history array' do
-      my_account.deposit(100, transaction_class_double)
+      my_account.deposit(100)
       expect(my_account.history).to eq [transaction_double]
     end
 

@@ -12,6 +12,6 @@ describe 'See a list of the recent transactions' do
     my_account.deposit(2000)
     my_account.deposit(1000)
     my_account.withdraw(500)
-    expect { my_account.print_statement("american date") }.to output("date || credit || debit || balance\n10/25/1994 || || 500.00 || 2500.00\n10/25/1994 || 1000.00 || || 3000.00\n10/25/1994 || 2000.00 || || 2000.00\n").to_stdout
+    expect { my_account.print_statement('american date') }.to output("date || credit || debit || balance\n10/25/1994 || || 500.00 || 2500.00\n10/25/1994 || 1000.00 || || 3000.00\n10/25/1994 || 2000.00 || || 2000.00\n").to_stdout
   end
 end

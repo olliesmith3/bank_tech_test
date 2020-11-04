@@ -24,44 +24,61 @@ class Account
     @history << @transaction_class.new(-amount, date)
   end
 
-  def print_statement(option = "no option")
+  def print_statement(option = 'no option')
     select(option)
     puts statement_head + "\n" + statement_body
+    clear_options
   end
 
   private
 
+  def clear_options
+    @american_date = false
+    @three_columns = false
+    @reverse_columns = false
+  end
+
   def select(option)
-    if option.include? "american date"
-      @american_date = true
-    elsif option.include? "three columns"
-      @three_columns = true
-    elsif option.include? "reverse columns"
-      @reverse_columns = true
-    end 
+    american_date(option)
+    three_columns(option)
+    reverse_columns(option)
+  end
+
+  def american_date(option)
+    @american_date = true if option.include? 'american date'
+  end
+
+  def three_columns(option)
+    @three_columns = true if option.include? 'three columns'
+  end
+
+  def reverse_columns(option)
+    @reverse_columns = true if option.include? 'reverse columns'
   end
 
   def statement_body
     balance = @starting_balance
-    chronological_transactions = @history.sort_by { |transaction| transaction.date }
+    chronological_transactions = @history.sort_by(&:date)
     chronological_transactions.map do |transaction|
-      credit, debit = format_credit_or_debit(transaction.amount), format_credit_or_debit(-transaction.amount)
+      credit = format_credit_or_debit(transaction.amount)
+      debit = format_credit_or_debit(-transaction.amount)
       balance += (credit.to_f - debit.to_f)
-      transaction_data(transaction, credit, debit, balance).squeeze(' ') + "\n"
+      transaction_data(transaction, credit, debit, balance).join(' || ').squeeze(' ') + "\n"
     end.reverse.join
   end
 
   def transaction_data(transaction, credit, debit, balance)
+    transactions_array = number_of_columns_body(format_date(transaction.date), credit, debit, format_money(balance))
     if @reverse_columns == true
-      number_of_columns_body(format_date(transaction.date), credit, debit, format_money(balance)).reverse.join(' || ')
+      transactions_array.reverse
     else
-      number_of_columns_body(format_date(transaction.date), credit, debit, format_money(balance)).join(' || ')
+      transactions_array
     end
   end
 
   def number_of_columns_body(date, credit, debit, balance)
     if @three_columns == true
-      debit == "" ? [date, credit, balance] : [date, "(#{debit})", balance]
+      debit == '' ? [date, credit, balance] : [date, "(#{debit})", balance]
     else
       [date, credit, debit, balance]
     end

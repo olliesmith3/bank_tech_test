@@ -3,7 +3,6 @@
 require 'timecop'
 
 describe 'See a list of the recent transactions' do
-
   it 'a backdated transaction is added last but appears at the bottom of the print_statement' do
     my_account = Account.new
     my_account.deposit(1000, Time.new(1994, 1, 1))

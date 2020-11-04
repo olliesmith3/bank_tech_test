@@ -100,15 +100,16 @@ balance || transaction || date
 2500.00 || (500.00) || 01/14/2012
 3000.00 || 2000.00 || 01/13/2012
 1000.00 || 1000.00 || 01/10/2012
+
 Of course, I can choose 0, 1, 2 or more options.
 
 1) To be able to change the date formatting I needed to separate the formatting and the data. This meant storing the raw date inside the transaction and formatting in the print_statement method. This then allowed me to pass the option into the format_date method and decide which format to use.
 
 2) Introducing a second option made it clear I could not have the default value being nil as I would not know which option to action. This led me to having instance variables for each option and having a helper method that carried out different options based on the option selected.
 
-3) This was 
+3) This could be completed fairly easily by adding two more helper methods, one for the head of the statement and one for the body.
 
-## Plan:
+## Original Plan (before additional requirements)
 ```
 classes: 
        account: knows the account value

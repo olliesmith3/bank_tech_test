@@ -30,14 +30,24 @@ class Account
     balance = @starting_balance
     chronological_transactions = @history.sort_by { |transaction| transaction.date }
     chronological_transactions.map do |transaction|
-      balance += (transaction.credit.to_f - transaction.debit.to_f)
-      transaction_data = transaction.date + ' || ' + transaction.credit + ' || ' + transaction.debit + ' || ' + format_balance(balance)
+      credit, debit = format_credit_or_debit(transaction.amount), format_credit_or_debit(-transaction.amount)
+      balance += (credit.to_f - debit.to_f)
+      transaction_data = transaction.date + ' || ' + credit + ' || ' + debit + ' || ' + format_money(balance)
       transaction_data.gsub(/\s+/, ' ') + "\n"
     end.reverse.join
   end
 
-  def format_balance(balance)
-    '%.2f' % balance.to_s
+  def format_credit_or_debit(amount)
+    if amount.negative?
+      ''
+    else
+      format_money(amount.abs)
+    end
+  end
+
+   # This replaces an integer or a float with a string that has two decimal places ( 100 => '100.00' )
+  def format_money(amount)
+    '%.2f' % amount.to_s
   end
 
   def check_input(amount)
